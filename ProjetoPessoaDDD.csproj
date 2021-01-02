@@ -1,8 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProjetoPessoaDDD.Dominio\**" />
+    <Compile Remove="ProjetoPessoaDDD.Repositorio\**" />
+    <Compile Remove="ProjetoPessoaDDD.Servico\**" />
+    <EmbeddedResource Remove="ProjetoPessoaDDD.Dominio\**" />
+    <EmbeddedResource Remove="ProjetoPessoaDDD.Repositorio\**" />
+    <EmbeddedResource Remove="ProjetoPessoaDDD.Servico\**" />
+    <None Remove="ProjetoPessoaDDD.Dominio\**" />
+    <None Remove="ProjetoPessoaDDD.Repositorio\**" />
+    <None Remove="ProjetoPessoaDDD.Servico\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="ProjetoPessoaDDD.Servico\ProjetoPessoaDDD.Servico.csproj" />
+  </ItemGroup>
 
 </Project>
